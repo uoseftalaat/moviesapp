@@ -37,4 +37,19 @@ class ViewModel(application:Application) : AndroidViewModel(application) {
             repostory.adduser(user)
         }
     }
+    fun checkNull(email:String , password:String): Boolean{
+        return (email.isEmpty() || password.isEmpty())
+    }
+
+    fun exists(email: String) : Boolean{
+        val username:String? = existence(email)
+        if(username != null){
+            return true
+        }
+        else return false
+    }
+
+    fun getPassword(email: String): String{
+        return getpassword(email)
+    }
 }

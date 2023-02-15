@@ -42,6 +42,7 @@ class movieadapter(var movieslist:List<Movies>):RecyclerView.Adapter<movieadapte
             activity.supportFragmentManager.beginTransaction().replace(R.id.source,fragment)
                 .addToBackStack("movieslist")
                 .commit()
+            val trash:MoviesListFragment = MoviesListFragment()
         }
 
     }

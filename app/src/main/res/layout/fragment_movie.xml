@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MovieFragment">
+    tools:context=".MovieFragment"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/movieimage"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="20dp"
+        android:layout_width="1080px"
+        android:layout_height="1100px"
         android:src="@drawable/avengers"
-        app:layout_constraintBottom_toTopOf="@+id/movienametv"></ImageView>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <TextView
         android:id="@+id/movienametv"
@@ -20,13 +22,14 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="40dp"
-        android:text="Avengers:Endgame"
         android:padding="5dp"
+        android:text="Avengers:Endgame"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/moviedescriptiontv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></TextView>
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movieimage"></TextView>
 
     <TextView
         android:id="@+id/moviedescriptiontv"
@@ -35,13 +38,14 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="40dp"
         android:layout_marginBottom="4dp"
-        android:text="MCU Movie"
         android:padding="5dp"
+        android:text="MCU Movie"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="parent"></TextView>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movienametv"></TextView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

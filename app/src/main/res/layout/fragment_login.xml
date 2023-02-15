@@ -1,71 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FragmentLogin">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
-    <TextView
-        android:id="@+id/hallotext"
+    </data>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Hallo to Stolen movies app where you can find all the Stolen movies you want in one place"
-        android:textSize="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="40dp"
-        ></TextView>
-    <EditText
-        android:id="@+id/loginemailtext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below = "@id/hallotext"
-        android:hint="enter your email or username"
-        android:textSize="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="40dp"
-        ></EditText>
-    <EditText
-        android:id="@+id/loginpasswordtext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="enter the password"
-        android:textSize="20dp"
-        android:layout_below="@id/loginemailtext"
-        android:layout_margin="40dp"
-        android:layout_centerHorizontal="true"
-        ></EditText>
-
-    <Button
-        android:id="@+id/loginbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="false"
-        android:layout_centerVertical="true"
-        android:layout_below="@id/loginpasswordtext"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="70dp"
-        android:text="login"></Button>
-    <TextView
-        android:layout_below="@id/loginpasswordtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="or you can"
-        android:textSize="15dp"
-        android:layout_margin="80dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"></TextView>
-
-    <Button
-        android:id="@+id/tosignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loginpasswordtext"
-        android:layout_centerInParent="true"
-        android:layout_margin="120dp"
-        android:text="SignUp"></Button>
+        android:layout_height="match_parent"
+        tools:context=".FragmentLogin">
 
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/hallotext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hallo to Stolen movies app where you can find all the Stolen movies you want in one place"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="40dp"></TextView>
+
+        <EditText
+            android:id="@+id/loginemailtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hallotext"
+            android:hint="enter your email or username"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="40dp"></EditText>
+
+        <EditText
+            android:id="@+id/loginpasswordtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter the password"
+            android:textSize="20dp"
+            android:layout_below="@id/loginemailtext"
+            android:layout_margin="40dp"
+            android:layout_centerHorizontal="true"></EditText>
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/loginpasswordtext"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="70dp"
+            android:text="login"></Button>
+
+        <TextView
+            android:layout_below="@id/loginpasswordtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or you can"
+            android:textSize="15dp"
+            android:layout_margin="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"></TextView>
+
+        <Button
+            android:id="@+id/tosignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginpasswordtext"
+            android:layout_centerInParent="true"
+            android:layout_margin="120dp"
+            android:text="SignUp"></Button>
+
+
+    </RelativeLayout>
+</layout>
