@@ -48,7 +48,6 @@ class ViewModel(application:Application) : AndroidViewModel(application) {
         }
         else return false
     }
-
     fun getPassword(email: String): String{
         return getpassword(email)
     }

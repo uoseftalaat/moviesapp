@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,9 +22,10 @@ class MovieFragment : Fragment() {
         val image = view.findViewById<ImageView>(R.id.movieimage)
         title.text = args?.getString("title")
         desc.text = args?.getString("description")
-        val imag = args?.getInt("image")
+        val imag = args?.getByteArray("image")
         if(imag != null)
-            image.setImageResource(imag)
+
+            image.setImageBitmap(BitmapFactory.decodeByteArray(imag,0,imag.size))
         return view
     }
 

@@ -4,11 +4,13 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.myapplication.R
 import kotlinx.coroutines.launch
 
 class MovieModel(application: Application): AndroidViewModel(application) {
     lateinit var repository:MovieRepo
-    lateinit var getmovie:LiveData<List<Movies>>
+    lateinit var getmovie:List<Movies>
+    lateinit var movie:Movies
     init {
         val movieDao:movieDao = MovieDatabase.getDatabase(application).movieDao()
         repository = MovieRepo(movieDao)
@@ -16,10 +18,21 @@ class MovieModel(application: Application): AndroidViewModel(application) {
            getmovie = repository.getmovie()
        }
     }
+    var movies = getmovie
 
-    fun addmovie(movie:Movies){
+    public fun addmovie(movie:Movies){
         viewModelScope.launch {
             repository.addmovie(movie)
         }
     }
+    fun delete(movie: Movies){
+        viewModelScope.launch {
+            repository.delete(movie)
+        }
+    }
+    fun checkNull(email:String , password:String): Boolean{
+        return (email.isEmpty() || password.isEmpty())
+    }
+
+
 }
